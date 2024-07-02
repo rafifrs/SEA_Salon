@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEA Salon</title>
+
+    <link rel="stylesheet" href="styles.css">
+      <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">
+                <img src="test.png" alt="SEA Salon Logo" style="height: auto; width: 100%;">
+            </a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="index.html" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="reservation.html" class="navbar__links">Reservation</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#review-section" class="navbar__links">Review</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="index.html" class="button">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main">
+        <div class="main__container">
+            <div class="main__content">
+                <h1>Beauty and Elegance Redefined</h1>
+                <h2>We strive for excellence, expertise, and creativity in the salon industry. Our talented stylists keep up with the latest trends and techniques to provide our clients with outstanding service and results.</h2>
+            </div>
+            <div class="main__img--container">
+                <img src="SEA_Salon.png" alt="SEA Salon Circle" class="responsive-img">
+            </div> 
+            <div class="main__bg">
+                <img src="bg.png" alt="" width="500">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+        <h4>
+            Discover Our All-Inclusive Beauty Services
+        </h4>
+        <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="hairstyle.png" alt="Hairstyle" class="image">
+            <div class="image-date">
+                <h3>Haircuts and Styling</h3>
+                <span class="text">Unlock your best look with our expert haircuts and styling BECAUSE you deserve to feel fabulous every day!</span>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img src="manip.png" alt="Manicure Padicure" class="image">
+            <div class="image-date">
+                <h3>Manicure Padicure</h3>
+                <span class="text">Pamper yourself with our luxurious manicures and pedicures BECAUSE you deserve to feel fabulous from fingertips to toes!</span>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img src="facial.png" alt="Facial Treatment" class="image">
+            <div class="image-date">
+                <h3>Facial Treatment</h3>
+                <span class="text">Refresh your skin with our rejuvenating facial treatments BECAUSE you deserve to shine with radiance!</span>
+            </div>
+        </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        loop:true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        });
+    </script>
+
+    <div class="reservation__button" id="reservation-form">
+        <div class="reservation__bg">
+            <img src="kupu.png" alt="" width="250">
+        </div>
+        <a href="reservation.html">
+            <button>Book Your Session Now!</button>
+        </a>
+    </div>
+
+    <section class="contact">
+        <div class="contact__content">
+            <h5>Contact Us</h5>
+            <p>Have questions or need assistance? We're here to help!
+            </p>
+        </div>
+        <div class="container">
+            <div class="contactinfo">
+                <div class="box">
+                    <div class="icon"><i class="fas fa-location-dot"></i></div>
+                    <div class="text">
+                        <h6>Address</h6>
+                        <p>123 Beauty Lane, Glamour City, GC 56789</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fas fa-envelope"></i></div>
+                    <div class="text">
+                        <h6>Email</h6>
+                        <p>contact@SEA-Salon.com</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fas fa-phone"></i></div>
+                    <div class="text">
+                        <h6>Phone</h6>
+                        <p>(555) 987-6543</p>
+                    </div>
+                </div>
+            </div>
+            <div id="review-section" class="review__form">
+                <form action="review.php" method="post">
+                    <h5>Review</h5>
+                    <div class="input__box">
+                        <input type="text" name="fullname" id="fullname" required="required">
+                        <span>Fullname</span>
+                    </div>
+                    <!-- <div class="input__box">
+                        <input type="text" name="" required="required">
+                        <span>Star</span>
+                    </div> -->
+                    <div class="rating">
+                        <span>Star</span>
+                        <div class="star-icon">
+                            <input type="radio" name="rating" value="1" id="rating1">
+                            <label for="rating1" class="fa fa-star"></label>
+                            <input type="radio" name="rating" value="2" id="rating2">
+                            <label for="rating2" class="fa fa-star"></label>
+                            <input type="radio" name="rating" value="3" id="rating3">
+                            <label for="rating3" class="fa fa-star"></label>
+                            <input type="radio" name="rating" value="4" id="rating4">
+                            <label for="rating4" class="fa fa-star"></label>
+                            <input type="radio" name="rating" value="5" id="rating5">
+                            <label for="rating5" class="fa fa-star"></label>
+                        </div>
+                    </div>
+                    <div class="input__box">
+                        <textarea required="required" name="feedback" id="feedback"></textarea>
+                        <span>Send Your Feedback!</span>
+                    </div>
+                    <div class="input__box">
+                        <input type="submit" name="" value="Send">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>

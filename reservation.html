@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to up, #e0218a, #ffe0f7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            border: 2px solid #e0218a;
+            background-image: linear-gradient(to bottom up, #ffe0f7, #e0218a);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        .input__box {
+            margin-bottom: 15px;
+        }
+
+        .input__box label {
+            display: block;
+            margin-bottom: 5px;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .input__box input,
+        .input__box select,
+        .input__box textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #e0218a;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #333;
+        }
+
+        .input__box input:focus,
+        .input__box select:focus,
+        .input__box textarea:focus {
+            outline: none;
+            border-color: #c71585;
+            box-shadow: 0 0 10px rgba(224, 33, 138, 0.5);
+        }
+
+        .input__box input[type="submit"] {
+            background-color: #e0218a;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .input__box input[type="submit"]:hover {
+            background-color: #c71585;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Reservation Form</h2>
+    <form action="reservation.php" method="post">
+        <div class="input__box">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="input__box">
+            <label for="phone">Active Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="input__box">
+            <label for="service">Type of Service</label>
+            <select id="service" name="service" required>
+                <option value="Haircuts and Styling">Haircuts and styling</option>
+                <option value="Manicure and Pedicure">Manicure and pedicure</option>
+                <option value="Facial Treatments">Facial treatments</option>
+            </select>
+        </div>
+        <div class="input__box">
+            <label for="datetime">Date and Time</label>
+            <input type="datetime-local" id="datetime" name="datetime" required>
+        </div>
+        <div class="input__box">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
