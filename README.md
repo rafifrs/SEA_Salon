@@ -13,6 +13,7 @@ Make sure index file and all other files are on C:\XAMPP\htdocs\projectname not 
 4) Start Apache and MySQL.
 5) Click on MySQL admin button.
 6) Open import tab (tuonti in finnish).
-7) Browse for .sql file you just extracted and click button at the end of page.
-8) untuk akses sebagai website tulis 
+7) Pastikan anda import file sql pada database dengan nama ‘test’ atau buat database baru dengan nama ‘test’ terlebih dahulu
+8) Browse for .sql file you just extracted and click button at the end of page.
+9) untuk akses sebagai website tulis 
 localhost/projectname/index.html
