@@ -16,6 +16,3 @@ Make sure index file and all other files are on C:\XAMPP\htdocs\projectname not 
 7) Browse for .sql file you just extracted and click button at the end of page.
 8) untuk akses sebagai website tulis 
 localhost/projectname/index.html
-
-
-After this you should be able to navigate to localhost/hotel
