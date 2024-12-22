@@ -1,3 +1,6 @@
+DEPLOY -> https://sea-salon-delta.vercel.app
+
+
 # SEA_Salon
 
 DIBUTUHKAN XAMPP
